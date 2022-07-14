@@ -1,0 +1,72 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.niveles-columnas{
+
+  
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   margin-bottom: 1rem;
+   gap: 2rem;
+
+   
+
+   .contenido-calendario{
+       h2{
+           text-align: center;
+       }
+       H3{
+           text-align: center;
+           font-weight: 200;
+           color: v.$negro;
+           @include m.tablet{
+            font-size: 2rem;
+        }
+        @include m.telefono{
+            font-size: 1.8rem;
+        }
+       }
+       p{
+           @include m.tablet{
+               font-size: 1.6rem;
+           }
+           @include m.telefono{
+               font-size: 1.4rem;
+           }
+           text-align: center;
+           font-weight: 300;
+       }
+   }
+
+    .imagen-nivel1{
+
+        background-image: url('../../../build/img/intro.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      
+    
+           
+        }
+    .imagen-nivel2{
+
+        background-image: url('../../../build/img/eip.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      
+    
+           
+        }
+    .imagen-nivel3{
+
+        background-image: url('../../../build/img/gap.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      
+    
+           
+        }
+       
+    }

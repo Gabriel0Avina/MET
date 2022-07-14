@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.titulo-centrado{
+    text-align: center;
+    margin-top: 5rem;
+    font-weight: 200;
+}
+.nosotros{
+
+    @include m.tablet{
+        display: block;
+    }
+
+    @include m.telefono{
+        display: block;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+    .card-nosotros{
+        padding: 2rem;
+        text-align: center;
+        border-radius: 1.5rem;
+        transition: all .3s ease;
+
+        h2{
+            font-weight: 400;
+            color: v.$negro;
+        }
+
+        i{
+           font-size: 9rem;
+           color: v.$azul;
+            
+        }
+       
+        &:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            transform: scale(1.1);
+            background-color: lighten($color: v.$azul, $amount: 40);
+        }
+    }
+}
+
+

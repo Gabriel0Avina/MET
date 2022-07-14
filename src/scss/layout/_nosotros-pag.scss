@@ -1,0 +1,121 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about-us{
+
+    @include m.tablet{
+        display: block;
+        font-size: 1.8rem;
+       
+    }
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    .imagen-sobre-nosotros{
+        @include m.tablet{
+            width: 100%;
+            height: 35rem;
+        }
+        width: 100%;
+        height: 100%;
+        
+        background-image: url('../../../build/img/met.webp');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h3{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}
+
+.nosotros-pag{
+    
+    background-color: #3a74c1; 
+    
+    .nosotros-header{
+       
+        padding: 2rem 0 1rem 0;
+        margin: 0;
+        span{
+            font-weight: 200;
+        }
+      
+        a{
+            text-align: center;
+            color: v.$blanco;
+            transition: all .3s ;
+            &:hover{
+                text-shadow:  0px 0px 14px rgba(57, 150, 150, 1);
+                color: v.$azul;
+                transform: scale(1.05);
+            }
+        }
+        
+    }
+}
+
+.quienes-somos_contenido{
+    @include m.tablet{
+        display: block;
+        h3{
+            text-align: center;
+        }
+    }
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    .grid-video{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .grid-texto{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    margin-bottom: 4rem;
+    gap:2rem;
+
+    p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: lighten($color: v.$negro, $amount: 20);
+        line-height: 1.4;
+        span{
+            font-weight: bold;
+        }
+    }
+    .video-somos1{
+        @include m.tablet{
+            height: 30rem;
+        }
+      width: 100%;
+      height: 100%;
+       
+       
+    }
+
+}
+.doctorado{
+    text-align: center;
+}
+.doctorado-grid{
+    @include m.tablet{
+        grid-template-columns: repeat(1,1fr);
+    }
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    margin-bottom: 4rem;
+    iframe{
+        width: 100%;
+        height: 100vh;
+    }
+}

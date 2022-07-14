@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.imagen-fondo{
+    background-image: url('../../../build/img/contactar.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30rem;
+    h3{
+        @include m.telefono{
+            font-size: 2.5rem;
+        }
+        margin-top: 5rem;
+        text-align: center;
+        color: v.$negro;
+        font-weight: 400;
+        padding-top: 5rem;
+    }
+    a{
+        @include m.telefono{
+            font-size: 4rem;
+        }
+        color: #57c863;
+        text-align: center;
+        font-size: 8rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}

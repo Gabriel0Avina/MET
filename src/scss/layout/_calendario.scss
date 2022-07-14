@@ -1,0 +1,173 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.calendario-contenedor{
+
+    @include m.tablet{
+        display: block;
+        margin-bottom: 3rem;
+    }
+    @include m.telefono{
+        display: block;
+        margin-bottom: 3rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    ul{
+        padding-left: 0;
+        li{
+            list-style: none;
+            margin-top: 1rem;
+            padding: 0;
+            color: v.$blanco;
+        }
+    }
+    
+    .calendario{
+
+        @include m.tablet{
+            margin-bottom: 3rem;
+        }
+        @include m.tablet{
+            margin-bottom: 3rem;
+        }
+        transition: all .3s ease;
+
+        p{
+            color: v.$blanco;
+            font-weight: 200;
+        }
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+               }
+        
+    }
+
+
+    .intro{
+        background-color: v.$azul;
+        padding: 5rem;
+        border-radius: 15px;
+    }
+    .eip{
+        background-color:hsla(0, 100%, 50%, 0.664) ;
+        padding: 5rem;
+        border-radius: 15px;
+    }
+    .gap{
+        background-color: v.$azulClaro;
+        padding: 5rem;
+        border-radius: 15px;
+    }
+
+    p{
+        text-align: center;
+    }
+}
+
+
+.fecha{
+    h2{
+        text-align: center;
+    }
+    h3{
+        font-size: 3.5rem;
+    }
+    p{
+        text-align: center;
+    }
+
+    .bg {
+        background-image: url('../../../build/img/velero.webp');
+        background-position: center center; 
+        background-size: cover;
+        min-height: 30rem;
+        width: 100%;
+       display: flex;
+      justify-content: space-evenly;
+      @include m.tablet{
+        display: block;
+        padding: 1rem 0; 
+      }
+       
+      }
+      
+      .panel {
+
+        @include m.tablet{
+            width: 90%;
+        }
+
+        background-image: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        width: 320px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 60px;
+        box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset,
+          rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
+        position: relative;
+        margin: 2rem;
+        transition: all .3s ease;
+        &:hover{
+            transform: scale(1.05);
+        }
+
+      
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.05) 40%,
+            rgba(255, 255, 255, 0) 40%
+          );
+          pointer-events: none;
+        }
+      }
+      
+      h2 {
+        font-size: 2em;
+        font-weight: 1000;
+        margin-top: 0;
+      }
+      
+      .card__text {
+        font-size: 14px;
+        line-height: 1.45;
+        opacity: 0.8;
+        margin-bottom: 2em;
+      }
+      
+      .button {
+        display: inline-block;
+        padding: 1.5em 3em;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(9, 28, 60, 1) 0%,
+          rgba(67, 46, 103, 1) 100%
+        );
+        text-decoration: none;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        border-radius: 10em;
+        color: white;
+      }
+      
+}

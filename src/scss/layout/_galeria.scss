@@ -1,0 +1,78 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.galeria{
+    @include m.tablet{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include m.tablet{
+        grid-template-columns: repeat(1,1fr);
+    }
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+
+    
+    .imagen-galeria{
+        width: 100%;
+    }
+   
+    
+}
+.boton{
+display: flex;
+justify-content: center;
+margin: 4rem 0;
+    .boton-galeria{
+        background-color: v.$azul;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 20px;
+        color: v.$blanco;
+        font-weight: 200;
+        transition: all .3s;
+        box-shadow: rgba(75, 46, 240, 0.4) 5px 5px, rgba(49, 46, 240, 0.3) 10px 10px, rgba(49, 46, 240, 0.2) 15px 15px, rgba(46, 65, 240, 0.1) 20px 20px, rgba(46, 59, 240, 0.05) 25px 25px;
+        &:hover{
+            background-color: darken($color: v.$azul, $amount: 20);
+            
+            transform: scale(1.05);
+        }
+    }
+}
+.galeria-pag{
+    @include m.tablet{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    
+    .imagen-galeria{
+       width: 100%;
+    }
+}
+.galeria-social{
+    p{
+        text-align: center;
+    }
+    .iconos-galeria{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        a{
+            font-size: 7rem;
+            transition: all 0.3s ;
+            &:hover{
+                transform: scale(1.15);
+            }
+            .whats{
+                color: v.$verde;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,2 @@
+function iniciarApp(){smoothScroll()}function smoothScroll(){console.log("Test");document.querySelectorAll(".separador a").forEach(e=>{e.addEventListener("click",(function(e){e.preventDefault();const o=e.target.attributes.href.value;document.querySelector(o).scrollIntoView({behavior:"smooth"})}))})}document.addEventListener("DOMContentLoaded",(function(){iniciarApp()}));
+//# sourceMappingURL=app.js.map

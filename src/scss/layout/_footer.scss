@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: #3a74c1 ;
+    height: 15rem;
+
+    .contenido-footer{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        p{
+            @include m.tablet{
+                font-size: 1.2rem;
+            }
+            color: v.$blanco;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+    }
+
+        .separador{
+            @include m.tablet{
+                gap: 1rem;
+                font-size: 1.4rem;
+            }
+
+         @include m.telefono{
+             gap: 0.7rem;
+             font-size: 1.1rem;
+         }
+
+         
+        
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+           
+            a{
+                color: v.$blanco;
+                font-weight: 400;
+                transition: all .3s ease;
+                &:hover{
+                 text-shadow:  0px 0px 14px rgba(57, 150, 150, 1);
+                 color: v.$azul;
+                 transform: scale(1.2);
+                 
+             }
+            }
+
+        }
+    }
